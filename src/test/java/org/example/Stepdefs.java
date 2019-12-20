@@ -4,6 +4,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.Assert;
 
 public class Stepdefs {
 
@@ -23,6 +24,7 @@ public class Stepdefs {
     @Then("^my belly should growl$")
     public void myBellyShouldGrowl() throws PendingException  {
         System.out.println("Our belly returns Grrrrrr");
+        Assert.assertEquals(1,1);
         //throw new PendingException();
     }
 
