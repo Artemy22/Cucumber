@@ -5,9 +5,11 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
+import org.junit.Test;
 
 public class Stepdefs {
 
+    @Test
     @Given("^I have \"([^\"]*)\" cukes in my belly cukes in my belly$")
     public void iHaveCukesInMyBellyCukesInMyBelly(int cukes) throws PendingException {
         Belly belly = new Belly();
@@ -15,12 +17,14 @@ public class Stepdefs {
         //throw new PendingException();
     }
 
+    @Test
     @When("^I wait \"([^\"]*)\" hour$")
     public void iWaitHour(int hour) throws PendingException  {
         System.out.println("It takes us: " + hour + " hours to did something with the cukes in our belly");
         //throw new PendingException();
     }
 
+    @Test
     @Then("^my belly should growl$")
     public void myBellyShouldGrowl() throws PendingException  {
         System.out.println("Our belly returns Grrrrrr");
@@ -28,6 +32,7 @@ public class Stepdefs {
         //throw new PendingException();
     }
 
+    @Test
     @Then("^I have to visit \"([^\"]*)\" asap$")
     public void iHaveToVisitWCAsap(String where_to_go) throws PendingException  {
         if (where_to_go.equals("Kitchen")) {
